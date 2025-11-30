@@ -16,6 +16,9 @@ class Category(str, Enum):
     DRONE = "DRONE"
     DOMOTICS = "DOMOTICS"
     PERIPHERAL = "PERIPHERAL"
+    PSU = "PSU"
+    CASE = "CASE"
+    STORAGE = "STORAGE"
 
 class Product(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)

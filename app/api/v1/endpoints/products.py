@@ -29,7 +29,7 @@ def read_products(
 ):
     query = select(Product)
     if category:
-        query = query.where(Product.category == category)
+        query = query.where(Product.category == category.upper())
     if min_price is not None:
         query = query.where(Product.price >= min_price)
     if max_price is not None:
